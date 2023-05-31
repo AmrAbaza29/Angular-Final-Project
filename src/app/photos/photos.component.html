@@ -1,0 +1,19 @@
+<div class="margin-all">
+    <div class="fs-5 p-3 d-flex flex-row bg-primary justify-content-center align-items-center text-center text-white flex-wrap navbar2"style="">
+        <div class="col col-lg-3 col-md-3 col-sm-12">{{User.name}}</div>
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <p>{{User.email}}</p>
+            <p>{{User.phone}}</p>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <p>Address</p>
+            <p>{{User.address.street}}, {{User.address.city}}</p>
+        </div>
+    </div>
+    <div class="container text-center">    
+        <div *ngFor="let photo of Photos" class="card text-white bg-success m-2 col" style="width:20%; display:inline-flex;">
+            <img src="{{photo.url}}" title="{{photo.title}}">
+        </div>
+    </div>
+    
+</div>

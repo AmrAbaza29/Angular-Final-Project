@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Amr",
+      "lastName": "Ashraf",
+      "email": "amrabaza29@gmail.com",
+      "dob": "1995-06-18T21:00:00.000Z",
+      "gender": "1",
+      "education": "Gradute",
+      "company": "Giza Systems",
+      "experience": 2,
+      "package": 6,
+      "id": 1
+    },
+    {
+      "firstName": "Nourhan",
+      "lastName": "Ashraf",
+      "email": "nour@gmail.com",
+      "dob": "2000-11-25T22:00:00.000Z",
+      "gender": "2",
+      "education": "Post-Graduate",
+      "company": "School",
+      "experience": 2,
+      "package": 6,
+      "id": 2
+    },
+    {
+      "firstName": "Ahmed",
+      "lastName": "Ashraf",
+      "email": "ada@gmail.com",
+      "dob": "2000-11-25T22:00:00.000Z",
+      "gender": "1",
+      "education": "Intermediate",
+      "company": "afsdf",
+      "experience": 2,
+      "package": 6,
+      "id": 3
+    },
+    {
+      "firstName": "Amr",
+      "lastName": "Ashraf",
+      "email": "amrabaza29@gmail.com",
+      "dob": "2023-05-09T21:00:00.000Z",
+      "gender": "1",
+      "education": "Diploma",
+      "company": "Giza Systems",
+      "experience": 2,
+      "package": 6,
+      "id": 4
+    }
+  ]
+}

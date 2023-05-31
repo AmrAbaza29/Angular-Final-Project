@@ -1,0 +1,25 @@
+<div class="margin-all">
+    <div class="fs-5 p-3 d-flex flex-row bg-primary justify-content-center align-items-center text-center text-white flex-wrap">
+        <div class="col col-lg-3 col-md-3 col-sm-12">{{User.name}}</div>
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <p>{{User.email}}</p>
+            <p>{{User.phone}}</p>
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <p>Address</p>
+            <p>{{User.address.street}}, {{User.address.city}}</p>
+        </div>
+    </div>
+    <div class="fs-5 text-danger text-center mt-3">{{User.name}}'s Album</div>
+    <div style="width:80%; margin:auto;"><hr></div>
+    <div class="container text-center d-flex flex-wrap justify-content-around">    
+        <div *ngFor="let album of Albums" class="card text-white col-lg-3 col-md-5 col-sm-12 bg-success m-2" style="width:200px;">
+            <div class="card-header" style="height:50px">Header</div>
+            <div class="card-body" style="height:200px; max-height:100%;">
+                <h5 class="card-title">Info card title</h5>
+                <p class="card-text" style="height:80px;">{{album.title}}</p>
+                <a routerLink="/photos/{{User.id}}/{{album.id}}" class="btn btn-primary">View Photos</a>
+            </div>
+        </div>
+    </div>    
+</div>

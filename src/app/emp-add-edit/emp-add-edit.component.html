@@ -1,0 +1,58 @@
+<div class="text-center text-primary" mat-dialog-title>{{data?'Update' : 'Add'}} User</div>
+<hr>
+<form [formGroup]="empForm" (ngSubmit)="OnFormSubmit()" class=>
+    <div mat-dialog-content class="content">
+        <div class="d-flex">
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input formControlName="name" matInput type="text" placeholder="ex. Ahmed">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput type="Email" placeholder="ex. abc@def.com">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input formControlName="phone" matInput type="text" placeholder="ex. 01012345678">
+                </mat-form-field>
+            </div>
+        </div>
+        <div formGroupName="address">
+            <div class="d-flex">
+                <div class="col-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>City</mat-label>
+                        <mat-select formControlName="city">
+                            <mat-option *ngFor="let item of city" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Street</mat-label>
+                        <input formControlName="street" matInput type="text" placeholder="ex. abc st">
+                    </mat-form-field>
+                </div>
+                <div class="col-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Post Code</mat-label>
+                        <input formControlName="zipcode" matInput type="text" placeholder="ex. 55545">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div matDialogActions class="action">
+        <button mat-raised-button [mat-dialog-close]="false">Cancel</button>
+        <button type="submit" mat-raised-button color="primary">{{data ? 'Update':'Save'}}</button>
+    </div>
+</form>
